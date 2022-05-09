@@ -1,0 +1,13 @@
+<div class="sizing">
+  <app-custom-bar-chart-timeline
+    [results]="data"
+    [gradient]="false"
+    [xAxis]="showXAxis"
+    [yAxis]="true"
+    [showXAxisLabel]="false"
+    [showYAxisLabel]="false"
+    [autoScale]="false"
+    (select)="onSelect($event)">
+  </app-custom-bar-chart-timeline>
+</div>
+

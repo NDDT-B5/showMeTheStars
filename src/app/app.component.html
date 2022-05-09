@@ -1,0 +1,20 @@
+<app-star-travel-chart [newStars]="newStars" [changeTimePerBucket]="timePerBucket" [timeDisplayed]="timeDisplayed"></app-star-travel-chart>
+<div class="">
+  <mat-form-field appearance="fill">
+    <mat-label>Angezeigter Zeitraum</mat-label>
+    <mat-select [(ngModel)]="timeDisplayed">
+      <mat-option *ngFor="let maxTime of maxTimes" [value]="maxTime.milliSeconds">
+        {{maxTime.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Zeitraum pro Bucket</mat-label>
+    <mat-select [(ngModel)]="timePerBucket">
+      <mat-option *ngFor="let timePerBucketSelection of timePerBucketSelections" [value]="timePerBucketSelection.milliSeconds">
+        {{timePerBucketSelection.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
